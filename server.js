@@ -8,6 +8,5 @@ const port = 4000;
 app.use(express.static('public'));
 app.use(cors());
 app.use('/api', routes); 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+app.listen(process.eventNames.PORT || 3000, () =>
+  console.log(`Server is running`));
