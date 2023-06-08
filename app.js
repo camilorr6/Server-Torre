@@ -1,9 +1,8 @@
 const express = require('express');
 const cors = require('cors');
-const routes = require('./modules');
+const routes = require('./controllers/bioRoutes');
 
 const app = express();
-const port = 4000;
 
 app.use(express.static('public'));
 app.use(cors());
