@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 const fetchBasicInfo = async (username) => {
-  const response = await axios.get(`https://search.torre.co/api/bios/${username}`);
+  const response = await axios.get(`https://torre.bio/api/bios/${username}`);
   const basicInfo = {
     username: response.data.username,
     name: response.data.name,
@@ -12,7 +12,7 @@ const fetchBasicInfo = async (username) => {
 };
 
 const fetchStrengths = async (username) => {
-  const response = await axios.get(`https://search.torre.co/api/bios/${username}`);
+  const response = await axios.get(`https://torre.bio/api/bios/${username}`);
   const strengths = response.data.strengths;
   const processedStrengths = strengths.map((strength) => ({
     id: strength.id,
@@ -23,7 +23,7 @@ const fetchStrengths = async (username) => {
 };
 
 const fetchSkillDetails = async (username, skillId) => {
-  const response = await axios.get(`https://search.torre.co/api/bios/${username}`);
+  const response = await axios.get(`https://torre.bio/api/bios/${username}`);
   const skills = response.data.strengths;
   const skill = skills.find((s) => s.id === skillId);
   const skillDetails = {
