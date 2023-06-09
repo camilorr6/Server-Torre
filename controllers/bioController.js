@@ -3,6 +3,7 @@ const { fetchBasicInfo, fetchStrengths, fetchSkillDetails } = require('../module
 const getBasicInfo = async (req, res) => {
   try {
     const { username } = req.params;
+    console.log(req.params)
     const basicInfo = await fetchBasicInfo(username);
     res.json(basicInfo);
   } catch (error) {
