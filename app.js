@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const routes = require('./controllers/bioRoutes');
+const routes = require('./routes/bioRoutes');
 
 const app = express();
 
